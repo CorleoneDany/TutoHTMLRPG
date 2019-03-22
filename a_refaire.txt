@@ -1,0 +1,84 @@
+page du cours introweb
+edt L1 SF Maths / Maths info
+edt L1 SF Info
+introduction à html
+
+définition
+
+HTML est défini par le consortium W3C.
+
+HTML est une abbréviation pour Hyper Text Markup Language. HTML est un dérivé de SGML (Standard Generalized Markup Language) qui est un métalangage qui permet de définir des langages basés sur des balises. En fait, dès la version 2 de HTML, tout a été fait pour que HTML soit "compatible" avec SGML. Pour information, XML est une version simplifiée de SGML.
+
+caractères spéciaux
+
+Les caractères spéciaux d'une URL doivent être codés selon leur code ascii (en hexa), notamment un espace par %20, % par %25, etc.
+Une URL est une URI (Uniform Resource Identifier) qui, en plus d'identifier une ressource (ce que fait une URI), précise le moyen pour la manipuler.
+
+Ainsi, un document (html) est disponible sur le réseau via une URL. Il est demandé et envoyé à une application cliente grâce au protocole http. Il ne reste plus qu'à l'application cliente (le navigateur) à interpréter le document. Ceci se fait par recherche de caractères particuliers : < qui ouvre un "tag", les & qui commencent les caractères spéciaux : &#code ascii;. Parmis les caractères spéciaux, il y a :
+
+&amp; / & ;
+&lt; / < ;
+&gt; / > ;
+&eacute; / é
+note : les caractères s'obtiennent par la &+lettre+accent; les accents étant acute, grave, circ, cedil, tilde et aussi les ligatures avec lig, e.g. &aelig; / æ).
+La liste des caractères spéciaux est disponible sur le site du W3C.
+
+Voici un exemple de code html, qui utilise les caractères spéciaux :
+
+
+<p>
+	<a href="http://validator.w3.org/check?uri=referer">
+		lien vers le validateur validator.w3.org
+	</a>
+</p>
+	
+liens et images
+
+les liens
+
+Un lien s'obtient par l'utilisation d'une balise <a> avec un texte descriptif du lien entre la balise ouvrante et la balise fermante et une cible (ou destination) grâce à l'attribut href de la balise.
+
+
+			le code suivant 
+			<a href="http://www.cevennes-couleurs.com/">magasin de vente de matérieux pour des travaux (peinture, sol, étanchéïté, etc.)</a>
+			donne le résultat (seul le texte est visible) : 
+			;magasin de vente de matérieux pour des travaux (peinture, sol, étanchéïté, etc.)
+		
+les images
+
+Une image s'insère par l'utilisation d'une balise (sans texte) <img> grâce à 2 attributs : src qui désigne l'emplacement de l'image (là où est le fichier source) et alt qui fournit une description de l'image.
+
+
+			le code suivant 
+			<img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_32.png" alt="logo du w3c format pgn 32x32" />
+			donne le résultat (seule l'image est visible) : 
+			logo du w3c format pgn 32x32
+		
+Il est possible de spécifier la dimension de l'image par l'attribut width ou height (si un seul est utilisé, les proportions sont respectées). Plutôt que d'utiliser ces attributs, l'utilisation du CSS est conseillé.
+
+À titre de comparaison, voici la même image avec une largeur fixée à 200, avec comme source une soit l'image au format png soit l'image au format svg : 
+logo du w3c format pgn 32x32 redimensionné à 200x200  logo du w3c format svg redimensionné à 200 de largeur
+
+des liens sur des images
+
+Il est possible de placer une image dans un lien, l'image devient alors cliquable. L'example ci-dessous est un lien vers le validateur du W3C pour tester cette page : 
+logo du w3c format svg redimensionné à 50 de largeur
+dont le code est : <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/html/logo/downloads/HTML5_Logo.svg" alt="logo du w3c format svg redimensionné à 50 de largeur" width="50" /></a>
+
+des liens avec des caractères spéciaux
+
+Pour les liens contenant des caractéres spéciaux html comme & ou des caractères spéciaux pour une url comme un espace encodé %20, il est conseillé de les écrire avec l'encodage.
+
+
+			le code suivant 
+			<a href="accent&amp;.html">lien vers accent&amp;.html</a>
+			donne le résultat : 
+			lien vers accent&.html
+			
+			et le code suivant 
+			<a href="emploi%20du%20temps.html">lien vers emploi du temps.html</a>
+			donne le résultat : 
+			lien vers emploi du temps.html
+		
+edt 2015-2016 s1 L1 SF Maths / Maths info
+edt 2015-2016 s1 L1 SF Info
